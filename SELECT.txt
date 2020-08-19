@@ -1,0 +1,137 @@
+SELECT
+
+    "Market"
+    , "Region"
+    , "influence area"
+    , "YearMonth"
+
+    , case when sum("Amount_Packs") is null then 0 else sum("Amount_Packs")  end as "SalesPacks"
+    -- ,"Market Size"
+
+    , case when sum(case when "Amount_Individual_Interactions">0 then "palexia interaction weight" end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 then "palexia interaction weight" end) end 
+        as "F2FVisitWeight"
+    , case when sum("Amount_Event Attendees Weighted") is null then 0 else sum("Amount_Event Attendees Weighted") end 
+        as "EventAttendees"
+    , case when sum("Amount_Event Weighted") is null then 0 else sum("Amount_Event Weighted") end 
+        as "EventCountWeighted"
+    , case when sum("Amount_Email Opens") is null then 0 else sum("Amount_Email Opens")  end 
+        as "EmailOpens"
+    -- ,case when sum(case when "source" = 'Social' then "Amount_Impressions" end) is null then 0 else sum(case when "source" = 'Social' then "Amount_Impressions" end) end as "SocialImpressions"
+
+    -- F2F Visit w Followup
+
+    , case when sum(case when "Amount_Individual_Interactions">0 and "had email followup" = 'true' then "palexia interaction weight" end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "had email followup" = 'true' then "palexia interaction weight" end) end 
+        as "F2Fwithfollowupemail"
+
+    -- F2F Visit - GRT Employee vs. Outsourced        
+    , case when sum(case when "Market" ='SPAIN' then 0
+                     when "Territory Function" in ('KAM','Sales Retail') then 0
+                     when "Amount_Interactions">0 then "Palexia Interaction Weight"   
+                     end) is null then 0 else 
+               sum(case when "Market" ='SPAIN' then 0
+                     when "Territory Function" in ('KAM','Sales Retail') then 0
+                     when "Amount_Interactions">0 then "Palexia Interaction Weight"   
+                     end)  end as "F2FOutsourced"        
+
+, case when sum(case 
+    when "Market" ='SPAIN'
+    and "Amount_Individual_Interactions">0 then "Palexia Interaction Weight"
+    
+    when "Territory Function" in ('KAM','Sales Retail')
+    and "Amount_Individual_Interactions">0 then "Palexia Interaction Weight"
+    end) 
+    
+    is null then 0 else 
+              sum(case when "Market" ='SPAIN'
+        and "Amount_Individual_Interactions">0 
+                           then "Palexia Interaction Weight"
+                       when "Territory Function" in ('KAM','Sales Retail')
+        and "Amount_Individual_Interactions">0 
+                           then "Palexia Interaction Weight"
+                     end) end as "F2FEmployee"        
+
+    -- F2F Visit - Segment
+    , case when sum(case when "Amount_Individual_Interactions">0 and "Segment" = 'A' then "Palexia Interaction Weight" 
+                     end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "Segment" = 'A' then "Palexia Interaction Weight" 
+                     end)  end as "F2FSegA"
+    , case when sum(case when "Amount_Individual_Interactions">0 and "Segment" = 'B' then "Palexia Interaction Weight" 
+                     end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "Segment" = 'B' then "Palexia Interaction Weight" 
+                     end) end as "F2FSegB"
+    , case when sum(case when "Amount_Individual_Interactions">0 and "Segment" = 'C' then "Palexia Interaction Weight" 
+                     end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "Segment" = 'C' then "Palexia Interaction Weight" 
+                     end)  end as "F2FSegC"
+    , case when sum(case when "Amount_Individual_Interactions">0 and "Segment" = 'Non-Target' then "Palexia Interaction Weight" 
+                     end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "Segment" = 'Non-Target' then "Palexia Interaction Weight" 
+                     end)  end as "F2FSegNonTarget"
+    , case when sum(case when "Amount_Individual_Interactions">0 and "Segment" is null then "Palexia Interaction Weight" 
+                     end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "Segment" is null then "Palexia Interaction Weight" 
+                     end) end as "F2FSegBlank"
+
+    -- F2F Whitespace vs. Retention
+    , case when sum(case when "Potential" in ('High','Medium','Low') and "Adoption" in ('Medium','High')
+        and "Amount_Individual_Interactions">0 then "Palexia Interaction Weight" 
+                     end) is null then 0 else sum(case when "Potential" in ('High','Medium','Low') and "Adoption" in ('Medium','High')
+        and "Amount_Individual_Interactions">0 then "Palexia Interaction Weight" 
+                     end) end as "F2FRetention"
+    , case when sum(case when "Potential" in ('High','Medium','Low') and "Adoption" in ('Low','No Adoption')
+        and "Amount_Individual_Interactions" > 0 then "Palexia Interaction Weight" 
+                     end) is null then 0 else sum(case when "Potential" in ('High','Medium','Low') and "Adoption" in ('Low','No Adoption')
+        and "Amount_Individual_Interactions" > 0 then "Palexia Interaction Weight" 
+                     end) end as "F2FWhitespace"
+
+, case when sum(case when "Potential" in ('High','Medium','Low') and "Adoption" in ('High','Medium','Low','No Adoption') then 0
+                    when "Amount_Individual_Interactions" > 0 then "Palexia Interaction Weight" 
+                     end) is null then 0 else 
+           sum(case when "Potential" in ('High','Medium','Low') and "Adoption" in ('High','Medium','Low','No Adoption') then 0
+                    when "Amount_Individual_Interactions" > 0 then "Palexia Interaction Weight" 
+                     end) end as "F2FNeither"
+
+    -- F2F Generalist/Internal vs. Specialist
+    , case when sum(case when "Global Specialty" in ('General Medicine','Internal Medicine')
+        and "Amount_Individual_Interactions">0 then "Palexia Interaction Weight" 
+                     end) is null then 0 else sum(case when "Global Specialty" in ('General Medicine','Internal Medicine')
+        and "Amount_Individual_Interactions">0 then "Palexia Interaction Weight" 
+                     end)  end as "F2FGeneralist"
+    , case when sum(case when "Global Specialty" not in ('General Medicine','Internal Medicine')
+        and "Amount_Individual_Interactions">0 then "Palexia Interaction Weight" 
+                     end) is null then 0 else sum(case when "Global Specialty" not in ('General Medicine','Internal Medicine')
+        and "Amount_Individual_Interactions">0 then "Palexia Interaction Weight" 
+                     end) end as "F2FSpecalist" 
+
+    -- F2F Visit - 1st, 2nd-3rd, 4th-5th, 6+
+
+, case when sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" in ('1','2') then "Palexia Interaction Weight" end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" in ('1','2') then "Palexia Interaction Weight" end) end as "F2FVisits1to2"
+
+, case when sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" in ('3','4')  then "Palexia Interaction Weight" end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" in ('3','4')  then "Palexia Interaction Weight" end) end as "F2FVisits3to4"
+
+, case when sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" in ('5','6','7','8')  then "Palexia Interaction Weight" end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" in ('5','6','7','8')  then "Palexia Interaction Weight" end)  end as "F2FVisits5to8"
+
+, case when sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" in ('9','10','11','12')  then "Palexia Interaction Weight" end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" in ('9','10','11','12')  then "Palexia Interaction Weight" end) end as "F2FVisits9to12"
+
+, case when sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" in ('13','14','15','16')  then "Palexia Interaction Weight" end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" in ('13','14','15','16')  then "Palexia Interaction Weight" end) end as "F2FVisits13to16"
+
+, case when sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" > 16  then "Palexia Interaction Weight" end) is null then 0 else sum(case when "Amount_Individual_Interactions">0 and "Visit_CountLast365Days" > 16  then "Palexia Interaction Weight" end)  end as "F2FVisits17plus"
+
+    -- Events Small vs. Large
+
+    , case when sum(case when "Event Size" = 'Micro (1-2)'   then "Amount_Event Attendees" 
+                     end) is null then 0 else sum(case when "Event Size" = 'Micro (1-2)'   then "Amount_Event Attendees" 
+                     end) end as "EventAttMicro"
+    , case when sum(case when "Event Size" = 'Small (3-8)'   then "Amount_Event Attendees" 
+                     end) is null then 0 else sum(case when "Event Size" = 'Small (3-8)'   then "Amount_Event Attendees" 
+                     end)  end as "EventAttSmall"
+    , case when sum(case when "Event Size" = 'Medium (9-15)' then "Amount_Event Attendees" 
+                     end) is null then 0 else sum(case when "Event Size" = 'Medium (9-15)' then "Amount_Event Attendees" 
+                     end)  end as "EventAttMedium"
+    , case when sum(case when "Event Size" in ('Micro (1-2)','Small (3-8)','Medium (9-15)') then "Amount_Event Attendees" 
+                     end) is null then 0 else sum(case when "Event Size" in ('Micro (1-2)','Small (3-8)','Medium (9-15)') then "Amount_Event Attendees" 
+                     end)  end as "EventAttAll"
+    , case when sum(case when "Event Size" = 'Large (16+)'   then "Amount_Event Attendees" 
+                     end) is null then 0 else sum(case when "Event Size" = 'Large (16+)'   then "Amount_Event Attendees" 
+                     end) end as "EventAttLarge"
+
+FROM "palexiaonlywrankwfollowup"
+
+WHERE "Is Palexia Focused" in ('True','Related') and "Region" is not null and "Yearmonth" is not null
+
+GROUP BY "influence area", "Market", "Region", "YearMonth"
