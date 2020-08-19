@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/https%20://jaewilson07.github.io/app_ecommerce/static/css/main.82a2b282.chunk.css",
-    "main.js": "/https%20://jaewilson07.github.io/app_ecommerce/static/js/main.dc20563d.chunk.js",
-    "main.js.map": "/https%20://jaewilson07.github.io/app_ecommerce/static/js/main.dc20563d.chunk.js.map",
-    "runtime-main.js": "/https%20://jaewilson07.github.io/app_ecommerce/static/js/runtime-main.e0839da6.js",
-    "runtime-main.js.map": "/https%20://jaewilson07.github.io/app_ecommerce/static/js/runtime-main.e0839da6.js.map",
-    "static/js/2.f095f160.chunk.js": "/https%20://jaewilson07.github.io/app_ecommerce/static/js/2.f095f160.chunk.js",
-    "static/js/2.f095f160.chunk.js.map": "/https%20://jaewilson07.github.io/app_ecommerce/static/js/2.f095f160.chunk.js.map",
-    "index.html": "/https%20://jaewilson07.github.io/app_ecommerce/index.html",
-    "precache-manifest.76ff3ffa040ccbebf23451657b133f0e.js": "/https%20://jaewilson07.github.io/app_ecommerce/precache-manifest.76ff3ffa040ccbebf23451657b133f0e.js",
-    "service-worker.js": "/https%20://jaewilson07.github.io/app_ecommerce/service-worker.js",
-    "static/css/main.82a2b282.chunk.css.map": "/https%20://jaewilson07.github.io/app_ecommerce/static/css/main.82a2b282.chunk.css.map",
-    "static/js/2.f095f160.chunk.js.LICENSE.txt": "/https%20://jaewilson07.github.io/app_ecommerce/static/js/2.f095f160.chunk.js.LICENSE.txt",
-    "static/media/crown.ed28accb.svg": "/https%20://jaewilson07.github.io/app_ecommerce/static/media/crown.ed28accb.svg"
+    "main.css": "/app_ecommerce/static/css/main.82a2b282.chunk.css",
+    "main.js": "/app_ecommerce/static/js/main.5c9232da.chunk.js",
+    "main.js.map": "/app_ecommerce/static/js/main.5c9232da.chunk.js.map",
+    "runtime-main.js": "/app_ecommerce/static/js/runtime-main.b80096e4.js",
+    "runtime-main.js.map": "/app_ecommerce/static/js/runtime-main.b80096e4.js.map",
+    "static/js/2.e7d9851c.chunk.js": "/app_ecommerce/static/js/2.e7d9851c.chunk.js",
+    "static/js/2.e7d9851c.chunk.js.map": "/app_ecommerce/static/js/2.e7d9851c.chunk.js.map",
+    "index.html": "/app_ecommerce/index.html",
+    "precache-manifest.095e241c8212b47f4c3cdbb9a22ac4e1.js": "/app_ecommerce/precache-manifest.095e241c8212b47f4c3cdbb9a22ac4e1.js",
+    "service-worker.js": "/app_ecommerce/service-worker.js",
+    "static/css/main.82a2b282.chunk.css.map": "/app_ecommerce/static/css/main.82a2b282.chunk.css.map",
+    "static/js/2.e7d9851c.chunk.js.LICENSE.txt": "/app_ecommerce/static/js/2.e7d9851c.chunk.js.LICENSE.txt",
+    "static/media/crown.ed28accb.svg": "/app_ecommerce/static/media/crown.ed28accb.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e0839da6.js",
-    "static/js/2.f095f160.chunk.js",
+    "static/js/runtime-main.b80096e4.js",
+    "static/js/2.e7d9851c.chunk.js",
     "static/css/main.82a2b282.chunk.css",
-    "static/js/main.dc20563d.chunk.js"
+    "static/js/main.5c9232da.chunk.js"
   ]
 }
