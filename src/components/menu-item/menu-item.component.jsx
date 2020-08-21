@@ -6,9 +6,6 @@ import './menu-item.style.scss';
 const MenuItem = ({ section, history, match }) => {
   const { title, imageUrl, subtitle, size, linkUrl } = section;
 
-  console.log(history);
-  console.log(`${match.url}${linkUrl}`);
-
   return (
     <div
       className={`${size} menu-item`}

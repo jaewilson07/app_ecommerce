@@ -4,7 +4,7 @@ import './collection-item.styles.scss';
 
 const collectionItem = ({ item }) => {
   const { imageUrl, name, price } = item;
-  console.log(imageUrl);
+
   return (
     <div className="collection-item">
       <div

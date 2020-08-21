@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './signin.styles.scss';
+import './sign-in.styles.scss';
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
@@ -17,16 +17,14 @@ class Signin extends Component {
   }
 
   handleChange = (event) => {
-    console.log(event.target.value);
+    const { value, name } = event.target;
 
-    const { name, value } = event.target;
     this.setState({ [name]: value });
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log('click');
     this.setSate({ email: '', password: '' });
   };
 
@@ -34,11 +32,11 @@ class Signin extends Component {
     const { email, password } = this.state;
 
     return (
-      <div className="sign-in">
+      <div className="form__sign">
         <h2>I already have an acount</h2>
         <span>Sign in with your email and password</span>
 
-        <form onSubmit={(event) => this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <FormInput
             type="email"
             name="email"
@@ -56,12 +54,14 @@ class Signin extends Component {
             required
             onChange={this.handleChange}
           />
-          <CustomButton type="submit" value="Submit Form">
-            Sign In
-          </CustomButton>
-          <CustomButton onClick={signInWithGoogle}>
-            Sign In With Google
-          </CustomButton>
+          <div className="buttons">
+            <CustomButton type="submit" value="Submit Form">
+              Sign In
+            </CustomButton>
+            <CustomButton onClick={signInWithGoogle} isgooglesignin>
+              Sign In With Google
+            </CustomButton>
+          </div>
         </form>
       </div>
     );
