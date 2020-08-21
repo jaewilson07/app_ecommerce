@@ -29,7 +29,7 @@ class Signin extends Component {
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
-      this.setSate({ email: '', password: '' });
+      this.setState({ email: '', password: '' });
     } catch (error) {
       console.log(error.message);
     }
