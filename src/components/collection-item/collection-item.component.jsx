@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 
 import './collection-item.styles.scss';
 import CustomButton from '../custom-button/custom-button.component';
-import { addItemCart } from '../../redux/cart-dropdown/cart-dropdown.action';
+import { addItemCart } from '../../redux/cart/cart-dropdown.action';
 
 const collectionItem = ({ item, addItemCart }) => {
-  const { id, imageUrl, name, price } = item;
+  const { imageUrl, name, price } = item;
 
   return (
     <div className="collection-item">

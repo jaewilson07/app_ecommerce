@@ -2,7 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
 import userReducer from './user/user.reducer';
-import cartReducer from './cart-dropdown/cart-dropdown.reducer';
+import cartReducer from './cart/cart-dropdown.reducer';
 
 const rootReducer = combineReducers({
   user: userReducer,
