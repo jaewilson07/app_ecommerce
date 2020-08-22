@@ -4,4 +4,6 @@ export const USER = {
 
 export const CART = {
   TOGGLE_CART_HIDDEN: 'TOGGLE_CART_HIDDEN',
+  ITEM_ADD: 'ITEM_ADD',
+  ITEM_REMOVE: 'ITEM_REMOVE',
 };
