@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/app_ecommerce/static/css/main.0a2a66c8.chunk.css",
-    "main.js": "/app_ecommerce/static/js/main.9394869c.chunk.js",
-    "main.js.map": "/app_ecommerce/static/js/main.9394869c.chunk.js.map",
-    "runtime-main.js": "/app_ecommerce/static/js/runtime-main.b80096e4.js",
-    "runtime-main.js.map": "/app_ecommerce/static/js/runtime-main.b80096e4.js.map",
-    "static/js/2.71e9eddc.chunk.js": "/app_ecommerce/static/js/2.71e9eddc.chunk.js",
-    "static/js/2.71e9eddc.chunk.js.map": "/app_ecommerce/static/js/2.71e9eddc.chunk.js.map",
-    "index.html": "/app_ecommerce/index.html",
-    "precache-manifest.427f40cfe781bf628711e32b20b51c43.js": "/app_ecommerce/precache-manifest.427f40cfe781bf628711e32b20b51c43.js",
-    "service-worker.js": "/app_ecommerce/service-worker.js",
-    "static/css/main.0a2a66c8.chunk.css.map": "/app_ecommerce/static/css/main.0a2a66c8.chunk.css.map",
-    "static/js/2.71e9eddc.chunk.js.LICENSE.txt": "/app_ecommerce/static/js/2.71e9eddc.chunk.js.LICENSE.txt",
-    "static/media/crown.svg": "/app_ecommerce/static/media/crown.ed28accb.svg",
-    "static/media/shopping-bag.30f07071.svg": "/app_ecommerce/static/media/shopping-bag.30f07071.svg"
+    "main.css": "/udemy_ecommerce/static/css/main.0a2a66c8.chunk.css",
+    "main.js": "/udemy_ecommerce/static/js/main.8431370f.chunk.js",
+    "main.js.map": "/udemy_ecommerce/static/js/main.8431370f.chunk.js.map",
+    "runtime-main.js": "/udemy_ecommerce/static/js/runtime-main.54d0720e.js",
+    "runtime-main.js.map": "/udemy_ecommerce/static/js/runtime-main.54d0720e.js.map",
+    "static/js/2.a98f0a94.chunk.js": "/udemy_ecommerce/static/js/2.a98f0a94.chunk.js",
+    "static/js/2.a98f0a94.chunk.js.map": "/udemy_ecommerce/static/js/2.a98f0a94.chunk.js.map",
+    "index.html": "/udemy_ecommerce/index.html",
+    "precache-manifest.f897f416631cf4dd0856430b50c75ed5.js": "/udemy_ecommerce/precache-manifest.f897f416631cf4dd0856430b50c75ed5.js",
+    "service-worker.js": "/udemy_ecommerce/service-worker.js",
+    "static/css/main.0a2a66c8.chunk.css.map": "/udemy_ecommerce/static/css/main.0a2a66c8.chunk.css.map",
+    "static/js/2.a98f0a94.chunk.js.LICENSE.txt": "/udemy_ecommerce/static/js/2.a98f0a94.chunk.js.LICENSE.txt",
+    "static/media/crown.svg": "/udemy_ecommerce/static/media/crown.ed28accb.svg",
+    "static/media/shopping-bag.30f07071.svg": "/udemy_ecommerce/static/media/shopping-bag.30f07071.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b80096e4.js",
-    "static/js/2.71e9eddc.chunk.js",
+    "static/js/runtime-main.54d0720e.js",
+    "static/js/2.a98f0a94.chunk.js",
     "static/css/main.0a2a66c8.chunk.css",
-    "static/js/main.9394869c.chunk.js"
+    "static/js/main.8431370f.chunk.js"
   ]
 }
