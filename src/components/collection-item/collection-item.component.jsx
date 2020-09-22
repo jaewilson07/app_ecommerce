@@ -5,10 +5,6 @@ import './collection-item.styles.scss';
 import CustomButton from '../custom-button/custom-button.component';
 import { addItemCart } from '../../redux/cart/cart-dropdown.action';
 
-import CustomButton from '../custom-button/custom-button.component';
-
-import { addItemCart } from '../../redux/cart/cart.action';
-
 const CollectionItem = ({ item, addItemCart }) => {
   const { imageUrl, name, price } = item;
 
