@@ -21,7 +21,7 @@ ReactDOM.render(
           <App />
         </PersistGate>
       </BrowserRouter>
-    </Provider>
+    </Provider> 
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -11,7 +11,6 @@ const CartIcon = ({ cartItemCount, toggleCartHidden }) => (
   <div
     className="cart-icon"
     onClick={() => {
-      console.log(cartItemCount);
       toggleCartHidden();
     }}
   >
