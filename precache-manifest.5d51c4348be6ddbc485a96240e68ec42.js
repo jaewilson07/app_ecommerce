@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a98244f8cbfcea9fd8772aa939a32bd0",
+    "revision": "ed7eea2c313008b32b08884931962973",
     "url": "/udemy_ecommerce/index.html"
   },
   {
-    "revision": "b910eec2152ea2ae652b",
+    "revision": "5b47496f6bc266ed4690",
     "url": "/udemy_ecommerce/static/css/main.4523d88e.chunk.css"
   },
   {
-    "revision": "ba72c08fd16f55d8eb43",
-    "url": "/udemy_ecommerce/static/js/2.8e73389f.chunk.js"
+    "revision": "a56450cf33388aaaaa68",
+    "url": "/udemy_ecommerce/static/js/2.dfeb62f2.chunk.js"
   },
   {
     "revision": "d0b13a04dd0dc4c851ad16fad1cc6f51",
-    "url": "/udemy_ecommerce/static/js/2.8e73389f.chunk.js.LICENSE.txt"
+    "url": "/udemy_ecommerce/static/js/2.dfeb62f2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b910eec2152ea2ae652b",
-    "url": "/udemy_ecommerce/static/js/main.00adc9db.chunk.js"
+    "revision": "5b47496f6bc266ed4690",
+    "url": "/udemy_ecommerce/static/js/main.f7a9d1ec.chunk.js"
   },
   {
     "revision": "a83c432a6bebce4ba6ba",

@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/udemy_ecommerce/static/css/main.4523d88e.chunk.css",
-    "main.js": "/udemy_ecommerce/static/js/main.00adc9db.chunk.js",
-    "main.js.map": "/udemy_ecommerce/static/js/main.00adc9db.chunk.js.map",
+    "main.js": "/udemy_ecommerce/static/js/main.f7a9d1ec.chunk.js",
+    "main.js.map": "/udemy_ecommerce/static/js/main.f7a9d1ec.chunk.js.map",
     "runtime-main.js": "/udemy_ecommerce/static/js/runtime-main.54d0720e.js",
     "runtime-main.js.map": "/udemy_ecommerce/static/js/runtime-main.54d0720e.js.map",
-    "static/js/2.8e73389f.chunk.js": "/udemy_ecommerce/static/js/2.8e73389f.chunk.js",
-    "static/js/2.8e73389f.chunk.js.map": "/udemy_ecommerce/static/js/2.8e73389f.chunk.js.map",
+    "static/js/2.dfeb62f2.chunk.js": "/udemy_ecommerce/static/js/2.dfeb62f2.chunk.js",
+    "static/js/2.dfeb62f2.chunk.js.map": "/udemy_ecommerce/static/js/2.dfeb62f2.chunk.js.map",
     "index.html": "/udemy_ecommerce/index.html",
-    "precache-manifest.ce5653068bd13062e96a9c2ed94e0ecb.js": "/udemy_ecommerce/precache-manifest.ce5653068bd13062e96a9c2ed94e0ecb.js",
+    "precache-manifest.5d51c4348be6ddbc485a96240e68ec42.js": "/udemy_ecommerce/precache-manifest.5d51c4348be6ddbc485a96240e68ec42.js",
     "service-worker.js": "/udemy_ecommerce/service-worker.js",
     "static/css/main.4523d88e.chunk.css.map": "/udemy_ecommerce/static/css/main.4523d88e.chunk.css.map",
-    "static/js/2.8e73389f.chunk.js.LICENSE.txt": "/udemy_ecommerce/static/js/2.8e73389f.chunk.js.LICENSE.txt",
+    "static/js/2.dfeb62f2.chunk.js.LICENSE.txt": "/udemy_ecommerce/static/js/2.dfeb62f2.chunk.js.LICENSE.txt",
     "static/media/crown.svg": "/udemy_ecommerce/static/media/crown.ed28accb.svg",
     "static/media/shopping-bag.30f07071.svg": "/udemy_ecommerce/static/media/shopping-bag.30f07071.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.54d0720e.js",
-    "static/js/2.8e73389f.chunk.js",
+    "static/js/2.dfeb62f2.chunk.js",
     "static/css/main.4523d88e.chunk.css",
-    "static/js/main.00adc9db.chunk.js"
+    "static/js/main.f7a9d1ec.chunk.js"
   ]
 }
