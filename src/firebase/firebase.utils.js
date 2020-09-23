@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-const config = {
+export const config = {
   apiKey: 'AIzaSyDK1RjfOdv4u_lpfYjkre-YTRZxeaB2L2o',
   authDomain: 'crowndb-7b394.firebaseapp.com',
   databaseURL: 'https://crowndb-7b394.firebaseio.com',
@@ -13,10 +13,31 @@ const config = {
   measurementId: 'G-YTNS793X1S',
 };
 
+// --- INITIALIZE CONNECTION AND AUTHENTICATION PROVIDER --- //
+firebase.initializeApp(config);
+export const db = firebase.firestore();
+
+export const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+
+provider.setCustomParameters({
+  prompt: 'select_account',
+});
+
+export const signInWithGoogle = async (event) => {
+  event.preventDefault();
+
+  try {
+    const userAuth = await auth.signInWithPopup(provider);
+    return userAuth;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// FIRESTORE CRUD OPERATIONS //
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
-
-  console.log('getting user from firestore');
 
   const userRef = db.doc(`users/${userAuth.uid}`);
   const snapShot = await userRef.get();
@@ -41,26 +62,40 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
-// configure firestore
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const collectionRef = db.collection(collectionKey);
 
-firebase.initializeApp(config);
-export const db = firebase.firestore();
+  // create a set of instructions for each object in the incoming array
+  const batch = db.batch();
 
-// configure google auth
-export const auth = firebase.auth();
-const provider = new firebase.auth.GoogleAuthProvider();
+  objectsToAdd.forEach((obj) => {
+    const newDocRef = collectionRef.doc();
+    console.log(obj, newDocRef);
+    batch.set(newDocRef, obj);
+  });
 
-provider.setCustomParameters({
-  prompt: 'select_account',
-});
+  await batch.commit();
+};
 
-export const signInWithGoogle = async (event) => {
-  event.preventDefault();
+export const convertCollectionsSnapshotToMap = (collection) => {
+  const convertedCollection = collection.docs.map((doc) => {
+    const { title, items } = doc.data();
 
-  try {
-    const userAuth = await auth.signInWithPopup(provider);
-    return userAuth;
-  } catch (err) {
-    console.log(err);
-  }
+    return {
+      id: doc.id,
+      routeName: encodeURI(title),
+      title,
+      items,
+    };
+  });
+
+  const mapCollection = convertedCollection.reduce((accum, doc) => {
+    accum[doc.title.toLowerCase()] = doc;
+    return accum;
+  }, {});
+
+  return mapCollection;
 };

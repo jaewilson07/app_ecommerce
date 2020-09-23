@@ -29,7 +29,6 @@ const Header = ({ currentUser, cart_hidden }) => (
         <div
           className="option"
           onClick={() => {
-            console.log('click');
             auth.signOut();
           }}
         >

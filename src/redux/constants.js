@@ -18,3 +18,7 @@ export const CART = {
 export const DIRECTORY = {
   SET_DIRECTORY: 'SET_DIRECTORY',
 };
+
+export const SHOP = {
+  UPDATE_COLLECTIONS: 'UPDATE_COLLECTIONS',
+};

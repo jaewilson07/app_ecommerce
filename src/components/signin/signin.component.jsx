@@ -17,17 +17,13 @@ class Signin extends Component {
   }
 
   handleChange = (event) => {
-    console.log(event.target.value);
-
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState;
-    console.log('click');
-    this.setSate({ email: '', password: '' });
+    this.setState({ email: '', password: '' });
   };
 
   render() {

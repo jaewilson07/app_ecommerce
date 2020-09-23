@@ -21,7 +21,11 @@ const rootReducer = combineReducers({
   shop: shopReducer,
 });
 
-const middlewares = [logger];
+//only use logger if in development environment
+const middlewares = [];
+if (process.env.NODE_ENV === 'development') {
+  middlewares.push(logger);
+}
 
 const store = createStore(
   persistReducer(PERSIST_CONFIG(storage), rootReducer),
