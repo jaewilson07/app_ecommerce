@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/udemy_ecommerce/static/css/main.0a2a66c8.chunk.css",
-    "main.js": "/udemy_ecommerce/static/js/main.df37d26d.chunk.js",
-    "main.js.map": "/udemy_ecommerce/static/js/main.df37d26d.chunk.js.map",
+    "main.css": "/udemy_ecommerce/static/css/main.4523d88e.chunk.css",
+    "main.js": "/udemy_ecommerce/static/js/main.00adc9db.chunk.js",
+    "main.js.map": "/udemy_ecommerce/static/js/main.00adc9db.chunk.js.map",
     "runtime-main.js": "/udemy_ecommerce/static/js/runtime-main.54d0720e.js",
     "runtime-main.js.map": "/udemy_ecommerce/static/js/runtime-main.54d0720e.js.map",
-    "static/js/2.a98f0a94.chunk.js": "/udemy_ecommerce/static/js/2.a98f0a94.chunk.js",
-    "static/js/2.a98f0a94.chunk.js.map": "/udemy_ecommerce/static/js/2.a98f0a94.chunk.js.map",
+    "static/js/2.8e73389f.chunk.js": "/udemy_ecommerce/static/js/2.8e73389f.chunk.js",
+    "static/js/2.8e73389f.chunk.js.map": "/udemy_ecommerce/static/js/2.8e73389f.chunk.js.map",
     "index.html": "/udemy_ecommerce/index.html",
-    "precache-manifest.5c58857660c54132a0212c63bf9ddceb.js": "/udemy_ecommerce/precache-manifest.5c58857660c54132a0212c63bf9ddceb.js",
+    "precache-manifest.ce5653068bd13062e96a9c2ed94e0ecb.js": "/udemy_ecommerce/precache-manifest.ce5653068bd13062e96a9c2ed94e0ecb.js",
     "service-worker.js": "/udemy_ecommerce/service-worker.js",
-    "static/css/main.0a2a66c8.chunk.css.map": "/udemy_ecommerce/static/css/main.0a2a66c8.chunk.css.map",
-    "static/js/2.a98f0a94.chunk.js.LICENSE.txt": "/udemy_ecommerce/static/js/2.a98f0a94.chunk.js.LICENSE.txt",
+    "static/css/main.4523d88e.chunk.css.map": "/udemy_ecommerce/static/css/main.4523d88e.chunk.css.map",
+    "static/js/2.8e73389f.chunk.js.LICENSE.txt": "/udemy_ecommerce/static/js/2.8e73389f.chunk.js.LICENSE.txt",
     "static/media/crown.svg": "/udemy_ecommerce/static/media/crown.ed28accb.svg",
     "static/media/shopping-bag.30f07071.svg": "/udemy_ecommerce/static/media/shopping-bag.30f07071.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.54d0720e.js",
-    "static/js/2.a98f0a94.chunk.js",
-    "static/css/main.0a2a66c8.chunk.css",
-    "static/js/main.df37d26d.chunk.js"
+    "static/js/2.8e73389f.chunk.js",
+    "static/css/main.4523d88e.chunk.css",
+    "static/js/main.00adc9db.chunk.js"
   ]
 }
