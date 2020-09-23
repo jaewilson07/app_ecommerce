@@ -14,9 +14,13 @@ export const selectCollectionForPreview = memoize(
   )
 );
 
-// this is memoization (using selectShopCollections as a parameter of createSelector)
 export const selectCollection = memoize((collectionUrlParam) =>
   createSelector([selectShopCollections], (collections) =>
     collections ? collections[collectionUrlParam] : null
   )
+);
+
+export const selectIsCollectionFetching = createSelector(
+  [selectShop],
+  (shop) => shop.isFetching
 );

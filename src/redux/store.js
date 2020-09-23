@@ -1,4 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
 // allows browser to cache store
@@ -22,7 +23,8 @@ const rootReducer = combineReducers({
 });
 
 //only use logger if in development environment
-const middlewares = [];
+const middlewares = [thunk];
+
 if (process.env.NODE_ENV === 'development') {
   middlewares.push(logger);
 }
