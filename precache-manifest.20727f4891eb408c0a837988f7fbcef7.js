@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ed7eea2c313008b32b08884931962973",
+    "revision": "cd47a28987fcef8067486caca4ffd2a5",
     "url": "/udemy_ecommerce/index.html"
   },
   {
-    "revision": "5b47496f6bc266ed4690",
-    "url": "/udemy_ecommerce/static/css/main.4523d88e.chunk.css"
+    "revision": "4efb1c57162e017defd1",
+    "url": "/udemy_ecommerce/static/css/main.4582d0a3.chunk.css"
   },
   {
-    "revision": "a56450cf33388aaaaa68",
-    "url": "/udemy_ecommerce/static/js/2.dfeb62f2.chunk.js"
+    "revision": "1826241b34882e9041a0",
+    "url": "/udemy_ecommerce/static/js/2.b03ced5c.chunk.js"
   },
   {
     "revision": "d0b13a04dd0dc4c851ad16fad1cc6f51",
-    "url": "/udemy_ecommerce/static/js/2.dfeb62f2.chunk.js.LICENSE.txt"
+    "url": "/udemy_ecommerce/static/js/2.b03ced5c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5b47496f6bc266ed4690",
-    "url": "/udemy_ecommerce/static/js/main.f7a9d1ec.chunk.js"
+    "revision": "4efb1c57162e017defd1",
+    "url": "/udemy_ecommerce/static/js/main.438c2338.chunk.js"
   },
   {
     "revision": "a83c432a6bebce4ba6ba",

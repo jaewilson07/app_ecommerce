@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/udemy_ecommerce/precache-manifest.5d51c4348be6ddbc485a96240e68ec42.js"
+  "/udemy_ecommerce/precache-manifest.20727f4891eb408c0a837988f7fbcef7.js"
 );
 
 self.addEventListener('message', (event) => {
