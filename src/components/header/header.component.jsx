@@ -7,7 +7,7 @@ import { ReactComponent as Logo } from '../../assets/crown.svg';
 import './header.styles.scss';
 
 import CartIcon from '../cart-icon/cart-icon.component';
-import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import CartDropdownContainer from '../cart-dropdown/cart-dropdown.container';
 
 import { auth } from '../../firebase/firebase.utils';
 import { selectCurrentUser } from '../../redux/user/user.selector';
@@ -41,7 +41,7 @@ const Header = ({ currentUser, cart_hidden }) => (
       )}
       <CartIcon />
     </div>
-    {!cart_hidden ? <CartDropdown /> : null}
+    {!cart_hidden ? <CartDropdownContainer /> : null}
   </div>
 );
 

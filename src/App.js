@@ -6,16 +6,17 @@ import { createStructuredSelector } from 'reselect';
 
 import './App.css';
 
+import Homepage from './pages/homepage/homepage.page';
+import ShopPage from './pages/shop/shop.page';
+import Signin from './pages/signin-and-signup/signin-and-signup.page';
+import CheckoutPage from './pages/checkout/checkout.page';
+
 import Header from './components/header/header.component';
-import Homepage from './pages/homepage/homepage.component';
-import ShopPage from './pages/shop/shop.component';
-import Signin from './pages/signin-and-signup/signin-and-signup.component';
 
 import { setCurrentUser } from './redux/user/user.action';
 import { selectCurrentUser } from './redux/user/user.selector';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
-import CheckoutPage from './pages/checkout/checkout.component';
 
 class App extends Component {
   unsubscribeFromAuth = null;
