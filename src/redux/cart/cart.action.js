@@ -19,3 +19,7 @@ export const dropItemCart = (item) => ({
   type: CART.ITEM_DROP,
   payload: item,
 });
+
+export const clearCart = () => ({
+  type: CART.CLEAR_CART,
+});

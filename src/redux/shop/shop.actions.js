@@ -1,12 +1,11 @@
 import { SHOP } from '../constants';
 
-import {
-  db,
-  convertCollectionsSnapshotToMap,
-} from '../../firebase/firebase.utils';
+// import {
+//   db,
+//   convertCollectionsSnapshotToMap,
+// } from '../../firebase/firebase.utils';
 
 //a thunk is an action creator that returns a dispatch function
-
 export const fetchCollectionsStart = () => ({
   type: SHOP.FETCH_COLLECTIONS_START,
 });
@@ -21,20 +20,22 @@ export const fetchCollectionsFailure = (errorMessage) => ({
   payload: errorMessage,
 });
 
-export const fetchCollectionStartAsync = () => {
-  console.log('fetching');
-  return (dispatch) => {
-    const collectionRef = db.collection('collections');
+// --redux thunk -- //
+// deprecated in favor of sagas //
+// export const fetchCollectionStartAsync = () => {
+//   console.log('fetching');
+//   return (dispatch) => {
+//     const collectionRef = db.collection('collections');
 
-    try {
-      dispatch(fetchCollectionsStart());
+//     try {
+//       dispatch(fetchCollectionsStart());
 
-      collectionRef.get().then((snapshot) => {
-        const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
-        dispatch(fetchCollectionsSuccess(collectionsMap));
-      });
-    } catch (err) {
-      dispatch(fetchCollectionsFailure(err.message));
-    }
-  };
-};
+//       collectionRef.get().then((snapshot) => {
+//         const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
+//         dispatch(fetchCollectionsSuccess(collectionsMap));
+//       });
+//     } catch (err) {
+//       dispatch(fetchCollectionsFailure(err.message));
+//     }
+//   };
+// };

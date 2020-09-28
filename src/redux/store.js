@@ -1,30 +1,22 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
-// allows browser to cache store
-import { persistStore, persistReducer } from 'redux-persist';
+// import thunk from 'redux-thunk';
 
-// allows use of local storage
-import storage from 'redux-persist/lib/storage';
-
-import userReducer from './user/user.reducer';
-import cartReducer from './cart/cart.reducer';
-import directoryReducer from './directory/directory.reducer';
+import { persistStore, persistReducer } from 'redux-persist'; // allows browser to cache store
+import storage from 'redux-persist/lib/storage'; // allows use of local storage
 
 import { PERSIST_CONFIG } from './constants';
-import shopReducer from './shop/shop.reducer';
 
-const rootReducer = combineReducers({
-  user: userReducer,
-  cart: cartReducer,
-  directory: directoryReducer,
-  shop: shopReducer,
-});
+import rootReducer from './root-reducer';
+import { sagaMiddleware, rootSaga } from './root-saga';
+
+const middlewares = [
+  //  thunk
+  sagaMiddleware,
+];
 
 //only use logger if in development environment
-const middlewares = [thunk];
-
 if (process.env.NODE_ENV === 'development') {
   middlewares.push(logger);
 }
@@ -36,5 +28,6 @@ const store = createStore(
 
 // will send  store to localStorage
 const persistor = persistStore(store);
+sagaMiddleware.run(rootSaga);
 
 export { store, persistor };
