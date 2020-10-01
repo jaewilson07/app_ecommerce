@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-if (process.eventNames.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
   console.log('trying to get');
   app.use(express.static(path.join(__dirname, 'client/build')));
 
