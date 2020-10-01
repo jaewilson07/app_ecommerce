@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 
 // gives application ability to rehydrate state (check if state has been stored in local storage)
 import { PersistGate } from 'redux-persist/integration/react';
+
 import { store, persistor } from './redux/store';
 
 import './index.css';
@@ -13,20 +14,10 @@ import App from './App';
 
 import * as serviceWorker from './serviceWorker';
 
-console.log(
-  process.env.NODE_ENV !== 'development' ? process.env.PUBLIC_URL : undefined
-);
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter
-        basename={
-          process.env.NODE_ENV !== 'development'
-            ? process.env.PUBLIC_URL
-            : undefined
-        }
-      >
+      <BrowserRouter>
         <PersistGate persistor={persistor}>
           <App />
         </PersistGate>
