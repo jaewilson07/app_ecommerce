@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/udemy_ecommerce/static/css/main.4582d0a3.chunk.css",
+    "main.js": "/udemy_ecommerce/static/js/main.438c2338.chunk.js",
+    "main.js.map": "/udemy_ecommerce/static/js/main.438c2338.chunk.js.map",
+    "runtime-main.js": "/udemy_ecommerce/static/js/runtime-main.54d0720e.js",
+    "runtime-main.js.map": "/udemy_ecommerce/static/js/runtime-main.54d0720e.js.map",
+    "static/js/2.b03ced5c.chunk.js": "/udemy_ecommerce/static/js/2.b03ced5c.chunk.js",
+    "static/js/2.b03ced5c.chunk.js.map": "/udemy_ecommerce/static/js/2.b03ced5c.chunk.js.map",
+    "index.html": "/udemy_ecommerce/index.html",
+    "precache-manifest.20727f4891eb408c0a837988f7fbcef7.js": "/udemy_ecommerce/precache-manifest.20727f4891eb408c0a837988f7fbcef7.js",
+    "service-worker.js": "/udemy_ecommerce/service-worker.js",
+    "static/css/main.4582d0a3.chunk.css.map": "/udemy_ecommerce/static/css/main.4582d0a3.chunk.css.map",
+    "static/js/2.b03ced5c.chunk.js.LICENSE.txt": "/udemy_ecommerce/static/js/2.b03ced5c.chunk.js.LICENSE.txt",
+    "static/media/crown.svg": "/udemy_ecommerce/static/media/crown.ed28accb.svg",
+    "static/media/shopping-bag.30f07071.svg": "/udemy_ecommerce/static/media/shopping-bag.30f07071.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.54d0720e.js",
+    "static/js/2.b03ced5c.chunk.js",
+    "static/css/main.4582d0a3.chunk.css",
+    "static/js/main.438c2338.chunk.js"
+  ]
+}

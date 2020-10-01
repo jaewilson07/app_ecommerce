@@ -13,10 +13,20 @@ import App from './App';
 
 import * as serviceWorker from './serviceWorker';
 
+console.log(
+  process.env.NODE_ENV !== 'development' ? process.env.PUBLIC_URL : undefined
+);
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter
+        basename={
+          process.env.NODE_ENV !== 'development'
+            ? process.env.PUBLIC_URL
+            : undefined
+        }
+      >
         <PersistGate persistor={persistor}>
           <App />
         </PersistGate>
